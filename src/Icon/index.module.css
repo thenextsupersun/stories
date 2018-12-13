@@ -1,0 +1,16 @@
+
+.icon {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.icon:hover img {
+  transition: transform .2s linear;
+  transform: scale(1.5) translateY(-25%) ;
+}

@@ -1,0 +1,23 @@
+.nav {
+  height: 90px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 2;
+}
+
+
+.nav > div {
+  height: 100%;
+  margin: 0px auto;
+  padding: 5px 0px;
+  background: rgba(205, 205, 205, .5);
+  border-radius: 10px 10px 0px 0px;
+  display: none;
+}
+
+.nav:hover > div {
+  display: flex;
+  justify-content: center;
+}
