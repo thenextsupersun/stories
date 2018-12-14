@@ -26,10 +26,10 @@ export default class BlogApp extends React.Component {
   }
 
   render() {
-    const AppWidth = 1200;
+    const AppWidth = "90%";
     return (
       <App {...this.props} width={AppWidth}>
-        <div className={Style.container} style={{ width: AppWidth }}>
+        <div className={Style.container} >
           <div>{this.state.articles.map((each, index) => 
             <div className={Style.entry} key={each.name} onClick={() => this.loadArticle(index)} >{each.name}</div>
           )}</div>
