@@ -1,0 +1,20 @@
+.nav {
+  width: 80%;
+  margin: 100px auto;
+  margin-bottom: 900px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav a{
+  font-size: 30px;
+  color: black;
+  transition: color 0.4s ease 0s;
+  cursor: pointer;
+  font: normal normal normal 40px/1.4em georgia,palatino,'book antiqua','palatino linotype',serif;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: rgb(222, 80, 33);
+}
