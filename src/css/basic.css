@@ -3,12 +3,6 @@
   padding: 0px;
 }
 
-.next {
-  height: 1000px;
-}
-
-#blog {
-  text-align: center;
-  font: normal normal normal 60px/1.2em georgia,palatino,'book antiqua','palatino linotype',serif;
-  color: black;
+html {
+  background: rgba(0, 0, 0, .2)
 }

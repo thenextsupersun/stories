@@ -1,7 +1,6 @@
 .nav {
-  width: 80%;
   margin: 100px auto;
-  margin-bottom: 900px;
+  margin-bottom: 800px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -17,4 +16,15 @@
 
 .nav a:hover {
   color: rgb(222, 80, 33);
+}
+
+@media (max-width: 500px) {
+  .nav {
+    margin: 50px auto;
+    margin-bottom: 500px;
+  }
+
+  .nav a {
+    font-size: 20px;
+  }
 }
