@@ -15,7 +15,6 @@ window.addEventListener('load', () => {
         blogArticle.innerHTML = text
         blogList.style.display = 'none'
         blogArticle.style.display = 'block'
-        console.log(event.target)
         blogTitle.textContent = event.target.textContent
         window.scrollBy(0, container.getBoundingClientRect().top)
       })
