@@ -1,4 +1,3 @@
-import list from '../articles/list.json'
 
 window.addEventListener('load', () => {
   let container = document.getElementsByClassName('container')[0]
@@ -23,32 +22,38 @@ window.addEventListener('load', () => {
   }
 
   // dynamic generating blog list according to list.json
-  list.sort((a, b) => { if (a.date > b.date) return -1 })
-  let year = ''
-  for (let each of list) {
-    let curYear = each.date.substr(0, 4)
-    if (curYear !== year) {
-      let yearDiv = document.createElement('div')
-      yearDiv.className = 'blog-article-year'
-      yearDiv.textContent = curYear
-      year = curYear
-      blogList.appendChild(yearDiv)
-    }
-    let articleDiv = document.createElement('div')
-    let dateSpan = document.createElement('span')
-    let articleLink = document.createElement('span')
-    dateSpan.textContent = each.date.substr(5, 5)
-    dateSpan.className = 'blog-article-date'
-    articleDiv.appendChild(dateSpan)
+  window.fetch('articles/list.json')
+    .then(res => {
+      return res.json()
+    })
+    .then(list => {
+      list.sort((a, b) => { if (a.date > b.date) return -1 })
+      let year = ''
+      for (let each of list) {
+        let curYear = each.date.substr(0, 4)
+        if (curYear !== year) {
+          let yearDiv = document.createElement('div')
+          yearDiv.className = 'blog-article-year'
+          yearDiv.textContent = curYear
+          year = curYear
+          blogList.appendChild(yearDiv)
+        }
+        let articleDiv = document.createElement('div')
+        let dateSpan = document.createElement('span')
+        let articleLink = document.createElement('span')
+        dateSpan.textContent = each.date.substr(5, 5)
+        dateSpan.className = 'blog-article-date'
+        articleDiv.appendChild(dateSpan)
 
-    articleLink.style.cursor = 'pointer'
-    articleLink.textContent = each.title
-    articleLink.setAttribute('data-id', each.id)
-    articleLink.onclick = articleClicked
+        articleLink.style.cursor = 'pointer'
+        articleLink.textContent = each.title
+        articleLink.setAttribute('data-id', each.id)
+        articleLink.onclick = articleClicked
 
-    articleDiv.appendChild(articleLink)
+        articleDiv.appendChild(articleLink)
 
-    articleDiv.className = 'blog-article-link'
-    blogList.appendChild(articleDiv)
-  }
+        articleDiv.className = 'blog-article-link'
+        blogList.appendChild(articleDiv)
+      }
+    })
 })
