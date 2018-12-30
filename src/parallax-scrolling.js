@@ -1,12 +1,17 @@
+let currentDisplay = 'blog'
+
 window.addEventListener('load', () => {
   let bgv = document.getElementsByClassName('bg-video')[0]
   let bgi = document.getElementsByClassName('bg-img')[0]
-  let blogNav = document.getElementsByClassName('blog-nav')[0]
-  let blogHead = document.getElementById('blog')
+  let container = document.getElementsByClassName('container')[0]
+  let magicHat = document.getElementsByClassName('nav-hat')[0]
+  let blogList = document.getElementsByClassName('blog-list')[0]
+  let blogArticle = document.getElementsByClassName('blog-article')[0]
 
   window.onscroll = () => {
     window.requestAnimationFrame(() => {
-      if (bgv.getBoundingClientRect().bottom + 100 < blogHead.getBoundingClientRect().top) {
+      // parallax scrolling video
+      if (bgv.getBoundingClientRect().bottom + 100 < container.getBoundingClientRect().top) {
         // bgv does not reache bottom
         bgv.style.top = window.scrollY + 'px'
         bgi.style.top = window.scrollY + 'px'
@@ -15,20 +20,32 @@ window.addEventListener('load', () => {
         bgi.style.top = window.scrollY + 'px'
       }
 
-      let top = blogHead.getBoundingClientRect().top
-      if (top <= 100) {
-        blogNav.style.display = 'block'
+      // magic hat
+      let top = container.getBoundingClientRect().top
+      if (top <= 0) {
+        magicHat.style.display = 'block'
       } else {
-        blogNav.style.display = 'none'
+        magicHat.style.display = 'none'
       }
     })
   }
+
+  // slow scroll navigation
   let navFakeList = document.getElementsByClassName('nav')[0].children
   for (let i = 0; i < navFakeList.length; ++i) {
     let child = navFakeList[i]
     let targetId = child.getAttribute('href').replace('#', '')
-    let target = document.getElementById(targetId)
+    let target = document.getElementsByClassName(`${targetId}-container`)[0]
     child.onclick = event => {
+      let containers = document.getElementsByClassName('container')[0].children
+      for (let j = 0; j < containers.length; ++j) {
+        if (containers[j] !== target) {
+          containers[j].style.display = 'none'
+        } else {
+          containers[j].style.display = 'block'
+          currentDisplay = event.target.getAttribute('href').replace('#', '')
+        }
+      }
       let distanceToScroll = target.getBoundingClientRect().top
       let timer = setInterval(() => {
         if (Math.abs(distanceToScroll) < 10) {
@@ -39,6 +56,23 @@ window.addEventListener('load', () => {
         window.scrollBy(0, 10)
       }, 5)
       event.preventDefault()
+    }
+  }
+
+  // magic hat navigation
+  let timer = null
+  magicHat.onclick = event => {
+    if (event.detail === 1) {
+      // single click
+      timer = setTimeout(() => {
+        if (currentDisplay === 'blog') {
+          blogArticle.style.display = 'none'
+          blogList.style.display = 'block'
+        }
+      }, 500)
+    } else {
+      clearTimeout(timer)
+      window.scrollTo(0, 0)
     }
   }
 })

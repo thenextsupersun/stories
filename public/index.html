@@ -8,32 +8,45 @@
 </head>
 
 <body>
+  <!-- bg -->
   <video class="bg-video" autoplay loop muted>
     <source src="https://storage.googleapis.com/video.wixstatic.com/video/11062b_b75407a670324c39babd882c6c01d983/1080p/mp4/file.mp4">
   </video>
-  <div class="bg-img">
-  </div>
+  <div class="bg-img"> </div>
+  <!-- nav bar -->
   <nav class="nav">
     <a href="#blog">博客.</a>
     <a href="#life">生活.</a>
     <a href="#me">我.</a>
   </nav>
-  <h1 id="blog">博客.</h1>
-  <nav class="blog-nav">
-    <img src="./favicon.ico" />
-    <div>Menu (Click)</div>
-    <div>Top (Double Click)</div>
-  </nav>
-  <div class="blog-container">
-    <div class="blog-hole"></div>
-    <div class="blog-time">15th December 2017</div>
-    <div class="blog-content">
-      <div class="blog-menu"></div>
-      <iframe scrolling="no" width="100%" height="100%" seamless frameborder="0"></iframe>
+  <div class="container">
+    <!-- magic hat -->
+    <nav class="nav-hat">
+      <img src="./favicon.ico" />
+      <div>Menu (Click)</div>
+      <div>Top (Double Click)</div>
+    </nav>
+    <!-- blog -->
+    <div class="blog-container">
+      <h1 id="blog">博客.</h1>
+      <div class="blog-content">
+        <div class="blog-hole"></div>
+        <div class="blog-time">15th December 2017</div>
+        <div class="blog-list"></div>
+        <iframe scrolling="no" class="blog-article"
+          width="100%" height="100%"  frameborder="0" seamless></iframe>
+      </div>
     </div>
-  </div>
-  <h1 id="life">生活.</h1>
-  <h1 id="me">我.</h1>
-</body>
+    <!-- life -->
+    <div class="life-container">
+      <h1 id="life">生活.</h1>
+      <div class="life-content"></div>
+    </div>
+    <!-- me -->
+    <div class="me-container">
+      <h1 id="me">我.</h1>
+    </div>
 
+  </div>
+</body>
 </html>

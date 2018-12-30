@@ -1,16 +1,16 @@
 import list from '../articles/menu.json'
 
 window.addEventListener('load', () => {
-  let blogMenu = document.getElementsByClassName('blog-menu')[0]
-  let blogIframe = document.getElementsByClassName('blog-content')[0].children[1]
-  blogIframe.addEventListener('load', () => {
-    blogIframe.style.height = blogIframe.contentWindow.document.body.scrollHeight + 'px'
+  let blogList = document.getElementsByClassName('blog-list')[0]
+  let blogArticle = document.getElementsByClassName('blog-article')[0]
+  blogArticle.addEventListener('load', () => {
+    blogArticle.style.height = blogArticle.contentWindow.document.body.scrollHeight + 'px'
   })
 
   function enterArticle (id) {
-    blogIframe.setAttribute('src', `articles/${id}/${id}.html`)
-    blogMenu.style.display = 'none'
-    blogIframe.style.display = 'block'
+    blogArticle.setAttribute('src', `articles/${id}/${id}.html`)
+    blogList.style.display = 'none'
+    blogArticle.style.display = 'block'
   }
 
   function articleClicked (event) {
@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
       yearDiv.className = 'blog-article-year'
       yearDiv.textContent = curYear
       year = curYear
-      blogMenu.appendChild(yearDiv)
+      blogList.appendChild(yearDiv)
     }
     let articleDiv = document.createElement('div')
     let dateSpan = document.createElement('span')
@@ -46,21 +46,6 @@ window.addEventListener('load', () => {
     articleDiv.appendChild(articleLink)
 
     articleDiv.className = 'blog-article-link'
-    blogMenu.appendChild(articleDiv)
-  }
-
-  let hat = document.getElementsByClassName('blog-nav')[0]
-  let timer = null
-  hat.onclick = event => {
-    if (event.detail === 1) {
-      // single click
-      timer = setTimeout(() => {
-        blogIframe.style.display = 'none'
-        blogMenu.style.display = 'block'
-      }, 500)
-    } else {
-      clearTimeout(timer)
-      window.scrollTo(0, 0)
-    }
+    blogList.appendChild(articleDiv)
   }
 })

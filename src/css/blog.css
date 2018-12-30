@@ -1,22 +1,11 @@
-#blog, #life, #me {
+.blog-container {
+  position: relative;
+}
+
+#blog {
   text-align: center;
   font: normal normal normal 60px/1.2em georgia,palatino,'book antiqua','palatino linotype',serif;
   color: black;
-}
-.blog-nav {
-  display: none;
-  position: fixed;
-  top: 5%;
-  right: 10px;
-  color: rgb(81, 55, 27);
-  text-align: center;
-  cursor: pointer;
-  z-index: 2;
-}
-.blog-nav img{
-  width: 50px;
-  height: 50px;
-  animation: 1s hatShaking infinite;
 }
 
 @keyframes hatShaking {
@@ -31,21 +20,16 @@
   100% {transform: translate3d(10px, 0, 0px)}
 }
 
-.blog-container {
-  position: relative;
-}
-
 .blog-hole {
   position: absolute;
   border: 2px solid #5FCCC4;
   border-radius: 50%;
-  left: 10%;
+  left: 0px;
   top: 0px;
   transform: translate(100%, 100%);
   width: 15px;
   height: 15px;
 }
-
 
 .blog-time {
   position: absolute;
@@ -57,27 +41,28 @@
   border-radius: 50px;
   padding: 2px 15px;
   color: white;
+  z-index: 2;
 }
 
 .blog-content {
-  /* https://blog.csdn.net/liuyan19891230/article/details/52515357 */
-  overflow: hidden;
   width: 80%;
-  margin: 5% auto;
+  margin: 100px auto;
   border-radius: 10px 10px 0px 0px;
   box-shadow: 0 0 41px 0 rgba(200,195,183,0.15);
   background: white;
   min-height: 600px;
+  position: relative;
 }
 
+.blog-list {
+  padding: 10%;
+  padding-bottom: 5%;
+}
 
-.blog-content iframe {
+.blog-article{
   display: none;
 }
 
-.blog-menu {
-  margin: 10%;
-}
 
 .blog-article-year {
   font-size: 22px;
@@ -128,17 +113,6 @@
 }
 
 @media (max-width: 500px) {
-  .blog-nav {
-    font-size: 10px;
-    right: 0%;
-    top: 10%;
-  }
-  .blog-nav img{
-    width: 30px;
-    height: 30px;
-    animation: 1s hatShaking infinite;
-  }
-
   .blog-hole {
     left: 0px;
     transform: translate(50%, 50%);
@@ -146,5 +120,6 @@
 
   .blog-content {
     width: 100%;
+    margin-bottom: 0px;
   }
 }

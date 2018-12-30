@@ -5,7 +5,5 @@ import './css/basic.css'
 import './css/background.css'
 import './css/navigator.css'
 import './css/blog.css'
-
-window.addEventListener('popstate', e => {
-  console.log(e)
-})
+import './css/life.css'
+import './css/me.css'
