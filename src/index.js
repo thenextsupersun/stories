@@ -1,6 +1,8 @@
 import './parallax-scrolling.js'
 import './blog.js'
 
+import './css/markdown.css'
+import './css/highlight.css'
 import './css/basic.css'
 import './css/background.css'
 import './css/navigator.css'

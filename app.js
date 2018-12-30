@@ -4,7 +4,10 @@ const fs = require('fs')
 let list = []
 rp.get({
   uri: 'https://api.github.com/repos/livoras/blog/issues',
-  headers: { 'User-Agent': 'Request-Promise' },
+  headers: {
+    'User-Agent': 'Request-Promise',
+    'Accept': 'application/vnd.github.VERSION.html+json'
+  },
   json: true
 }).then(articles => {
   for (let article of articles) {
@@ -13,7 +16,7 @@ rp.get({
       id: article.id,
       date: article.created_at
     })
-    fs.writeFile(`./articles/markdowns/${article.id}.md`, article.body, () => console.log(article.id))
+    fs.writeFile(`./articles/${article.id}.html`, article.body_html, () => console.log(article.id))
   }
   fs.writeFile('./articles/list.json', JSON.stringify(list), () => console.log('list.json'))
 })

@@ -7,24 +7,10 @@
   left: 0px;
   top: 0px;
   z-index: -2;
-  background-attachment: fixed;
-}
-
-.bg-img {
-  background-image: url(https://static.wixstatic.com/media/0da768_46b55443eb984c0eacfbdcb1b67a2b7b.png);
-  width: 100%;
-  height: 80%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
 }
 
 @media (max-width: 500px) {
   .bg-video {
-    height: 60%;
-  }
-  .bg-img {
     height: 60%;
   }
 }

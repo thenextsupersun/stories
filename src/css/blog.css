@@ -31,7 +31,7 @@
   height: 15px;
 }
 
-.blog-time {
+.blog-title {
   position: absolute;
   top: 0%;
   left: 50%;
@@ -50,7 +50,6 @@
   border-radius: 10px 10px 0px 0px;
   box-shadow: 0 0 41px 0 rgba(200,195,183,0.15);
   background: white;
-  min-height: 600px;
   position: relative;
 }
 
@@ -60,7 +59,9 @@
 }
 
 .blog-article{
+  padding: 5%;
   display: none;
+  min-height: 500px;
 }
 
 
@@ -121,5 +122,10 @@
   .blog-content {
     width: 100%;
     margin-bottom: 0px;
+  }
+
+  .blog-article{
+    padding: 30px 5%;
+    display: none;
   }
 }
