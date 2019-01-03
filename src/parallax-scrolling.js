@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
     let child = navFakeList[i]
     let targetId = child.getAttribute('href').replace('#', '')
     let target = document.getElementsByClassName(`${targetId}-container`)[0]
-    child.onclick = event => {
+    child.addEventListener('click', event => {
       let containers = document.getElementsByClassName('container')[0].children
       for (let j = 0; j < containers.length; ++j) {
         if (containers[j] !== target) {
@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
         window.scrollBy(0, 10)
       }, 5)
       event.preventDefault()
-    }
+    })
   }
 
   // magic hat navigation
