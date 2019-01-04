@@ -83,6 +83,11 @@
   border-left: 1px solid #555;
 }
 
+.blog-article-link a {
+  text-decoration: none;
+  color: black;
+}
+
 .blog-article-year::before {
   content: " ";
   position: absolute;
@@ -106,6 +111,7 @@
   border: 1px solid black;
   border-radius: 50%;
 }
+
 
 .blog-article-date {
   color: #5FCCC4;
