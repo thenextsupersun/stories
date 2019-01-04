@@ -1,6 +1,7 @@
 import { initScrolling } from './parallax-scrolling.js'
 import { initBlog } from './blog.js'
-import { initPlayer} from './player.js'
+import { initLife } from './life'
+import { initPlayer } from './player.js'
 import { initRouter } from './h5-router.js'
 
 import './css/markdown.css'
@@ -15,6 +16,7 @@ import './css/me.css'
 window.addEventListener('load', () => {
   initScrolling()
   initBlog()
+  initLife()
   initPlayer()
   initRouter(['blog', 'life', 'me'])
 })

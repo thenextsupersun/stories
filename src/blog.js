@@ -62,16 +62,12 @@ export function initBlog () {
   window.addEventListener('router-blog', event => {
     let routers = event.detail
     if (ready) {
-      for (let j = 0; j < containers.length; ++j) {
-        if (containers[j].className !== 'blog-container') {
-          containers[j].style.display = 'none'
-        } else {
-          containers[j].style.display = 'block'
-        }
-      }
+      // show article list
       blogList.style.display = 'block'
       blogArticle.style.display = 'none'
       blogTitle.textContent = '博客列表'
+
+      // may show article
       handleSubRouters(routers)
       scrollToVideoBottom()
     } else {
@@ -79,10 +75,18 @@ export function initBlog () {
       fetchBlogList()
         .then(updateBlogList)
         .then(() => {
+          // may show article
           ready = true
           handleSubRouters(routers)
           scrollToVideoBottom()
         })
+    }
+    for (let j = 0; j < containers.length; ++j) {
+      if (containers[j].className !== 'blog-container') {
+        containers[j].style.display = 'none'
+      } else {
+        containers[j].style.display = 'block'
+      }
     }
   })
 }

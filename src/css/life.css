@@ -10,5 +10,9 @@
 }
 
 .life-content {
-  height: 1000px;
+  margin: 100px 0px;
+}
+
+.life-content-image img {
+  width: 100%;
 }
