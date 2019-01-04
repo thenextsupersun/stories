@@ -7,7 +7,9 @@
     "build": "webpack --config webpack.prod.js",
     "article": "node app.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "aplayer": "^1.10.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",

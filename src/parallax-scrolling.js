@@ -10,29 +10,16 @@ export function initScrolling () {
     } else {
       magicHat.style.display = 'none'
     }
-
-    // magic hat navigation
-    magicHat.onclick = () => {
-      window.scrollTo(0, 0)
-    }
   })
+
+  magicHat.onclick = () => {
+    window.scrollTo(0, 0)
+  }
 }
 
-export function slowScrollTo (target) {
+export function scrollToVideoBottom () {
   setTimeout(() => {
-    let distanceToScroll = target.getBoundingClientRect().top
-    let timer = setInterval(() => {
-      if (Math.abs(distanceToScroll) < 10) {
-        clearInterval(timer)
-        window.scrollBy(0, distanceToScroll)
-      }
-      if (distanceToScroll < 0) {
-        distanceToScroll += 10
-        window.scrollBy(0, -10)
-      } else {
-        distanceToScroll -= 10
-        window.scrollBy(0, 10)
-      }
-    }, 1)
+    let distanceToScroll = bgv.getBoundingClientRect().bottom
+    window.scrollBy(0, distanceToScroll)
   }, 0)
 }

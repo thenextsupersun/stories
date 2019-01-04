@@ -1,5 +1,5 @@
 import { handleSubRouters } from './h5-router.js'
-import { slowScrollTo } from './parallax-scrolling.js'
+import { scrollToVideoBottom } from './parallax-scrolling.js'
 
 export function initBlog () {
   let container = document.getElementsByClassName('container')[0]
@@ -73,7 +73,7 @@ export function initBlog () {
       blogArticle.style.display = 'none'
       blogTitle.textContent = '博客列表'
       handleSubRouters(routers)
-      slowScrollTo(container)
+      scrollToVideoBottom()
     } else {
       // haven't render blog list before
       fetchBlogList()
@@ -81,7 +81,7 @@ export function initBlog () {
         .then(() => {
           ready = true
           handleSubRouters(routers)
-          slowScrollTo(container)
+          scrollToVideoBottom()
         })
     }
   })
