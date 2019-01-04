@@ -1,6 +1,6 @@
-import './parallax-scrolling.js'
-import './blog.js'
-import './h5-router.js'
+import { initScrolling } from './parallax-scrolling.js'
+import { initBlog } from './blog.js'
+import { initRouter } from './h5-router.js'
 
 import './css/markdown.css'
 import './css/highlight.css'
@@ -11,6 +11,8 @@ import './css/blog.css'
 import './css/life.css'
 import './css/me.css'
 
-window.addEventListener('popstate', e => {
-  console.log(e)
+window.addEventListener('load', () => {
+  initScrolling()
+  initBlog()
+  initRouter(['blog', 'life', 'me'])
 })
