@@ -1,19 +1,20 @@
 let bgv = document.getElementsByClassName('bg-video')[0]
-let magicHat = document.getElementsByClassName('nav-hat')[0]
+let navHat = document.getElementsByClassName('nav-hat')[0]
 
 export function initScrolling () {
   window.addEventListener('scroll', () => {
     // magic hat
     let top = bgv.getBoundingClientRect().bottom
     if (top <= 0) {
-      magicHat.style.display = 'block'
+      navHat.style.display = 'block'
     } else {
-      magicHat.style.display = 'none'
+      navHat.style.display = 'none'
     }
   })
 
-  magicHat.onclick = () => {
-    window.scrollTo(0, 0)
+  navHat.onclick = () => {
+    window.alert('左下角有播放器...')
+    // window.scrollTo(0, 0)
   }
 }
 

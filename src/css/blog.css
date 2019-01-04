@@ -3,6 +3,7 @@
 }
 
 #blog {
+  margin: 80px;
   text-align: center;
   font: normal normal normal 60px/1.2em georgia,palatino,'book antiqua','palatino linotype',serif;
   color: black;
@@ -46,7 +47,7 @@
 
 .blog-content {
   width: 80%;
-  margin: 100px auto;
+  margin: 0px auto 100px auto;
   border-radius: 10px 10px 0px 0px;
   box-shadow: 0 0 41px 0 rgba(200,195,183,0.15);
   background: white;
@@ -120,6 +121,9 @@
 }
 
 @media (max-width: 500px) {
+  #blog {
+    margin: 50px;
+  }
   .blog-hole {
     left: 0px;
     transform: translate(50%, 50%);

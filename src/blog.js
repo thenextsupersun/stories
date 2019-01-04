@@ -14,8 +14,6 @@ export function initBlog () {
 
   function updateArticle (text) {
     blogArticle.innerHTML = text
-    blogList.style.display = 'none'
-    blogArticle.style.display = 'block'
   }
 
   // ajax fetch a list of articles
@@ -26,6 +24,7 @@ export function initBlog () {
   function updateBlogList (list) {
     list.sort((a, b) => { if (a.date > b.date) return -1 })
     let year = ''
+    blogList.textContent = ''
     for (let each of list) {
       let curYear = each.date.substr(0, 4)
       if (curYear !== year) {
@@ -45,9 +44,11 @@ export function initBlog () {
       articleLink.textContent = each.title
       articleLink.setAttribute('href', `/blog/${each.id}`)
       window.addEventListener(`router-${each.id}`, () => {
-        fetchArticle(each.id)
-          .then(updateArticle)
-          .then(() => { blogTitle.textContent = each.title })
+        blogTitle.textContent = each.title
+        blogArticle.textContent = '载入中...'
+        blogList.style.display = 'none'
+        blogArticle.style.display = 'block'
+        fetchArticle(each.id).then(updateArticle)
       })
 
       articleDiv.appendChild(articleLink)

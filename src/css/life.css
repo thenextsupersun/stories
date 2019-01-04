@@ -7,12 +7,57 @@
   text-align: center;
   font: normal normal normal 60px/1.2em georgia,palatino,'book antiqua','palatino linotype',serif;
   color: black;
+  margin: 100px;
 }
 
 .life-content {
-  margin: 100px 0px;
+  margin: 0px;
+}
+
+.life-content-image {
+  position: relative;
 }
 
 .life-content-image img {
   width: 100%;
+}
+
+.life-content-image span {
+  position: absolute;
+  left: 30% ;
+  top: 30%;
+  color: white;
+  opacity: .6;
+  font-size: 24px;
+}
+
+.life-content-video {
+  width: 80%;
+  height: 600px;
+  margin: 30px auto;
+}
+
+.life-content-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 500px) {
+  #life {
+    margin: 50px;
+  }
+  .life-content-image img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .life-content-image span {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    color: white;
+    opacity: .6;
+    font-size: 14px;
+  }
+
 }
