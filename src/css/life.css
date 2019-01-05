@@ -33,7 +33,7 @@
 
 .life-content-video {
   width: 80%;
-  height: 600px;
+  height: 800px;
   margin: 30px auto;
 }
 
@@ -58,6 +58,12 @@
     color: white;
     opacity: .6;
     font-size: 14px;
+  }
+
+  .life-content-video {
+    width: 100%;
+    height: 200px;
+    margin: 50px auto;
   }
 
 }
