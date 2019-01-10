@@ -1,0 +1,14 @@
+.Home {
+  width: 100%;
+  height: 100%;
+}
+
+/* banner */
+.Home-upper {
+  height: 70%;
+}
+
+/* nav */
+.Home-lower {
+  height: 30%;
+}
