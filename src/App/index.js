@@ -15,9 +15,9 @@ class App extends React.Component {
   constructor (props) {
     super(props)
 
-    this.Blog = EnterAnimationWrapper(Blog, 'slideInLeft')
-    this.Life = EnterAnimationWrapper(Life, 'slideInRight')
-    this.Me = EnterAnimationWrapper(Me, 'slideInUp')
+    this.Blog = EnterAnimationWrapper(Blog, 'fadeIn')
+    this.Life = EnterAnimationWrapper(Life, 'fadeIn')
+    this.Me = EnterAnimationWrapper(Me, 'fadeIn')
     this.Home = EnterAnimationWrapper(Home, 'fadeIn')
   }
   render () {

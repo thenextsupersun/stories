@@ -1,3 +1,17 @@
 .Blog {
-  height: 80%;
+  background: #f7f7f7;
+  min-height: 100%;
+  overflow: hidden;
 }
+
+.Blog-sidebar {
+  width: 25%;
+  float: left;
+} 
+
+.Blog-content {
+  width: 60%;
+  padding: 3%;
+  background: white;
+  float: left;
+} 

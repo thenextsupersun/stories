@@ -1,0 +1,34 @@
+.SideBar-list {
+  padding: 5%;
+}
+
+.SideBar-article-year {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  padding: 20px 0px;
+}
+
+.SideBar-article-link {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+  padding: 10px 0px;
+}
+
+
+.SideBar-article-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.SideBar-article-link a:hover {
+  font-size: 15px;
+}
+
+.SideBar-article-date {
+  color: #5FCCC4;
+  margin-right: 10px;
+}
