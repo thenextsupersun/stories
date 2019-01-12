@@ -24,7 +24,6 @@ yarn-error.log*
 
 debug.log
 
-config.js
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -50,3 +49,4 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode
+config.js
