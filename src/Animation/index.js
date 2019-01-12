@@ -8,9 +8,9 @@ export default function EnterAnimationWrapper (WrappedComponent, animation) {
         in={props.match !== null}
         classNames={{
           enter: 'animated',
-          enterActive: animation,
-          exit: 'animated',
-          exitActive: 'fadeOutUp'
+          enterActive: animation
+          // exit: 'animated',
+          // exitActive: 'fadeOutUp'
         }}
         timeout={{ enter: 1000, exit: 0 }}
         mountOnEnter

@@ -30,9 +30,9 @@ const renderList = list => {
     }
     renderResult.push(
       <div key={each.title} className={classes['SideBar-article-link']}>
-        <span className={classes['SideBar-article-date']}>
+        <div className={classes['SideBar-article-date']}>
           {each.date.substr(5, 5)}
-        </span>
+        </div>
         <NavLink to={`/blog/${each.id}`}>{each.title}</NavLink>
       </div>
     )
