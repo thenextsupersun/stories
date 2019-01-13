@@ -39,12 +39,24 @@ export default class Blog extends React.Component {
   renderArticleRouter = () => {
     return (
       <Switch>
-        {
-          this.state.list.map(each => (
-            <Route key={each.title} path={`/blog/${each.id}`}
-              render={() => <Article {...each} />} />
-          ))
-        }
+        {this.state.list.map(each => (
+          <Route
+            key={each.title}
+            path={`/blog/${each.id}`}
+            render={() => <Article {...each} />}
+          />
+        ))}
+        <Route
+          render={() => (
+            <div>
+              <h3>听完这首《加州旅馆》再看我的博客好吗?</h3>
+              <br />
+              <iframe src='//player.bilibili.com/player.html?aid=717741&cid=1052159&page=1'
+                scrolling='no' border='0' frameBorder='no' framespacing='0'
+                title='hotel-california' allowFullScreen width='700px' height='500px' />
+            </div>
+          )}
+        />
       </Switch>
     )
   }

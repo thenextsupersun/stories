@@ -1,5 +1,5 @@
-.SideBar-list {
-  padding: 5%;
+.SideBar {
+  padding: 2%;
 }
 
 .SideBar-article-year {
@@ -24,7 +24,7 @@
 }
 
 .SideBar-article-link a:hover {
-  font-size: 15px;
+  color: lightsalmon;
 }
 
 .SideBar-article-date {

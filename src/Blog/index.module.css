@@ -4,7 +4,7 @@
 }
 
 .Blog-sidebar {
-  position: fixed;
+  position: absolute;
   background: #f7f7f7;
   left: 0%;
   width: 30%;
@@ -12,7 +12,6 @@
 } 
 
 .Blog-content {
-  box-sizing: border-box;
   position: absolute;
   left: 30%;
   width: 70%;

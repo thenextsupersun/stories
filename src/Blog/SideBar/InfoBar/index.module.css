@@ -1,0 +1,57 @@
+.InfoBar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.InfoBar-avatar, .InfoBar-nav {
+  width: 152px;
+  height: 202px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  position: relative;
+}
+
+.InfoBar-avatar-fork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  height: 50%;
+  width: 50%;
+}
+
+.InfoBar-avatar-image {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.InfoBar-avatar h4 {
+  text-align: center;
+  line-height: 50px;
+}
+
+.InfoBar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.InfoBar-nav a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  height: 33%;
+  line-height: 66px;
+}
+
+.InfoBar a:nth-of-type(1) {
+  background-color: green;
+}
+
+.InfoBar a:nth-of-type(2) {
+  background-color: aquamarine;
+}
+
+.InfoBar a:nth-of-type(3) {
+  background-color: orange;
+}

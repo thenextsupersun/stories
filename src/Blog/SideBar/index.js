@@ -1,14 +1,21 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import InfoBar from './InfoBar'
+
 import classes from './index.module.css'
 
 export default function SideBar (props) {
-  let { className, list } = props
+  let className = classes['SideBar']
+  if (props.className) {
+    className += ` ${props.className}`
+  }
+
   return (
     <div className={className}>
+      <InfoBar />
       <div className={classes['SideBar-list']}>
-        {renderList(list)}
+        {renderList(props.list)}
       </div>
     </div>
   )
