@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "request-promise": "^4.2.2",
     "standard": "^12.0.1"
   }
 }
