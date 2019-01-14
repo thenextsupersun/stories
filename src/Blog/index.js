@@ -22,9 +22,7 @@ export default class Blog extends React.Component {
     return (
       <div className={className}>
         <SideBar list={list} className={classes['Blog-sidebar']} />
-        <div className={classes['Blog-content']}>
-          {list ? this.renderArticleRouter() : null}
-        </div>
+        {list ? this.renderArticleRouter() : null}
       </div>
     )
   }
@@ -43,21 +41,9 @@ export default class Blog extends React.Component {
           <Route
             key={each.title}
             path={`/blog/${each.id}`}
-            render={() => <Article {...each} />}
+            render={() => <Article className={classes['Blog-content']} {...each} />}
           />
         ))}
-        <Route
-          render={() => (
-            <div>
-              <h3>听完这首《加州旅馆》再看我的博客好吗?</h3>
-              <br />
-              <iframe src='//player.bilibili.com/player.html?aid=717741&cid=1052159&page=1'
-                scrolling='no' border='0' frameBorder='no' framespacing='0'
-                title='hotel-california' allowFullScreen width='700px' height='500px' />
-            </div>
-          )}
-        />
-      </Switch>
-    )
+      </Switch>)
   }
 }

@@ -10,18 +10,23 @@ export default class Article extends React.Component {
   componentDidMount () {
     this.fetchArticle(this.props.id)
       .then(article => this.setState({ article }))
+    window.scrollTo(0, 0)
   }
 
   render () {
     const { article } = this.state
     return (article
       ? (
-        <React.Fragment>
+        <div className={this.props.className}>
           <h1 className={classes['Article-title']}>{this.props.title}</h1>
           <div className={'markdown-body'} dangerouslySetInnerHTML={{ __html: article }} />
-        </React.Fragment>
+        </div>
       )
-      : '载入中...'
+      : (
+        <div className={this.props.className}>
+          载入中...
+        </div>
+      )
     )
   }
 

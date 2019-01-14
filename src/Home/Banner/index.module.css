@@ -14,3 +14,17 @@
   opacity: .6;
   font-size: 24px;
 }
+
+@media (max-width: 500px) {
+  .Banner {
+    background: url('./bg.jpg');
+    background-size: 100% 100%;
+  }
+
+  .Banner > span {
+    left: 5%;
+    top: 5%;
+    writing-mode: vertical-lr;
+    opacity: 1;
+  }
+}
