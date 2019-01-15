@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import EnterAnimationWrapper from '../Animation'
+import FadeAnimationWrapper from '../Animation'
 import Blog from '../Blog'
 import Life from '../Life'
 import Me from '../Me'
@@ -15,10 +15,10 @@ class App extends React.Component {
   constructor (props) {
     super(props)
 
-    this.Blog = EnterAnimationWrapper(Blog, 'fadeIn')
-    this.Life = EnterAnimationWrapper(Life, 'fadeIn')
-    this.Me = EnterAnimationWrapper(Me, 'fadeIn')
-    this.Home = EnterAnimationWrapper(Home, 'fadeIn')
+    this.Blog = FadeAnimationWrapper(Blog, 'fadeIn')
+    this.Life = FadeAnimationWrapper(Life, 'fadeIn')
+    this.Me = FadeAnimationWrapper(Me, 'fadeIn')
+    this.Home = FadeAnimationWrapper(Home, 'fadeIn')
   }
   render () {
     return (

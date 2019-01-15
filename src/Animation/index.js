@@ -1,18 +1,18 @@
 import React from 'react'
 import { CSSTransition } from 'react-transition-group'
 
-export default function EnterAnimationWrapper (WrappedComponent, animation) {
-  return function (props) {
+export default function FadeAnimationWrapper (WrappedComponent) {
+  return function ComponentWithEnterAnimation (props) {
     return (
       <CSSTransition
         in={props.match !== null}
         classNames={{
           enter: 'animated',
-          enterActive: animation
-          // exit: 'animated',
-          // exitActive: 'fadeOutUp'
+          enterActive: 'fadeIn',
+          exit: 'animated',
+          exitActive: 'fadeOut'
         }}
-        timeout={{ enter: 1000, exit: 0 }}
+        timeout={{ enter: 1000, exit: 1000 }}
         mountOnEnter
         unmountOnExit
       >
