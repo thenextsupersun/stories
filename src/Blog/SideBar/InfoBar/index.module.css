@@ -1,75 +1,18 @@
 .InfoBar {
   display: flex;
-  justify-content: center;
+  height: 100px;
   width: 100%;
-}
-
-.InfoBar-avatar, .InfoBar-nav {
-  width: 40%;
-  height: 202px;
   border: 1px solid #333;
-  border-radius: 5px;
-  position: relative;
   margin-bottom: 20px;
 }
 
-.InfoBar-avatar-fork {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0;
-  height: 50%;
-  width: 50%;
-}
-
-.InfoBar-avatar-image {
-  width: 100%;
-  height: 66%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.InfoBar-avatar h4 {
-  position: absolute;
-  bottom: 17%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-
-.InfoBar-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.InfoBar-nav a {
+.InfoBar a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  height: 100%;
+  width: 34%;
+  background: white;
   color: black;
-  height: 34%;
-}
-
-.InfoBar a:nth-of-type(1) {
-  background-color: green;
-}
-
-.InfoBar a:nth-of-type(2) {
-  background-color: aquamarine;
-}
-
-.InfoBar a:nth-of-type(3) {
-  background-color: orange;
-}
-
-
-@media (max-width: 1000px) and (min-width: 500px) {
-  .InfoBar {
-    flex-direction: column;
-    align-items: center;
-  }
-  .InfoBar-avatar, .InfoBar-nav {
-    width: 80%;
-  }
 }

@@ -11,7 +11,6 @@ export default class Blog extends React.Component {
   state = {}
 
   componentDidMount () {
-    console.log('来一次')
     this.fetchBlogList().then(list => {
       this.setState({ list: list.sort((a1, a2) => a2 - a1) })
     })
@@ -23,7 +22,7 @@ export default class Blog extends React.Component {
     let className = classes.Blog
     if (this.props.className) className += ' ' + this.props.className
     return (
-      <Media query='(max-width: 500px)'>
+      <Media query='(max-width: 1000px)'>
         {isPhone => {
           return isPhone ? (
             <div className={className}>
