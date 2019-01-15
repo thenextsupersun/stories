@@ -27,11 +27,14 @@ export default class Blog extends React.Component {
           return isPhone ? (
             <div className={className}>
               {match && match.isExact
+                // phone: /blog
                 ? <SideBar list={list} className={classes['Blog-sidebar']} />
+                // phone  /blog/:id
                 : (list ? this.renderArticleRouter() : null)
               }
             </div>
           ) : (
+            // desktop
             <div className={className}>
               <SideBar list={list} className={classes['Blog-sidebar']} />
               {list ? this.renderArticleRouter() : null}
