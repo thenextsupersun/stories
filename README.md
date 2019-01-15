@@ -10,4 +10,4 @@
 该分支主要用于开发静态博客样式, 如果仅仅是想使用该工具请参照 [gh-pages](https://github.com/nzhl/stories/tree/gh-pages)分支.
 
 ## Custom
-暂不支持主题定制
+该项目仅提供实现思路, 通用性和定制性不强, 慎用! 
