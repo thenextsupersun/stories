@@ -12,7 +12,7 @@ export default function Navigator ({ friends }) {
             <img alt='avatar' className={classes['avatar']} src={friend.avatar} />
             <div className={classes['info']}>
               <h3 className={classes['name']}>{friend.name}</h3>
-              <span>{friend.description}</span>
+              <span className={classes['description']}>{friend.description}</span>
             </div>
           </a>
         )

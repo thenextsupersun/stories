@@ -18,22 +18,10 @@ export default function SideBar (props) {
       <ListBar list={props.list} />
       <FriendBar friends={[
         {
-          name: '嘉兴侠客山姆赵',
-          description: '我讨厌语法糖, 搞不好会有牙疼的风险',
+          name: 'wasamisam',
+          description: '专注于21世纪青年启蒙',
           avatar: 'https://avatars2.githubusercontent.com/u/17445431?s=460&v=4',
-          url: 'https://github.com/wasamisam0119'
-        },
-        {
-          name: '嘉兴侠客山姆赵',
-          description: '我讨厌语法糖, 搞不好会有牙疼的风险',
-          avatar: 'https://avatars2.githubusercontent.com/u/17445431?s=460&v=4',
-          url: 'https://github.com/wasamisam0119'
-        },
-        {
-          name: '嘉兴侠客山姆赵',
-          description: '我讨厌语法糖, 搞不好会有牙疼的风险',
-          avatar: 'https://avatars2.githubusercontent.com/u/17445431?s=460&v=4',
-          url: 'https://github.com/wasamisam0119'
+          url: 'https://wasamisam0119.github.io'
         }
       ]} />
     </div>
