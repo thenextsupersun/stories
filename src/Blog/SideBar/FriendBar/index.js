@@ -8,7 +8,7 @@ export default function Navigator ({ friends }) {
       <h2 className={classes['title']}>一些表面兄弟...</h2>
       {
         friends.map(friend =>
-          <a href={friend.url} className={classes['column']}>
+          <a key={friend.name} href={friend.url} className={classes['column']}>
             <img alt='avatar' className={classes['avatar']} src={friend.avatar} />
             <div className={classes['info']}>
               <h3 className={classes['name']}>{friend.name}</h3>
