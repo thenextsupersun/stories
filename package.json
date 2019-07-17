@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.0",
+    "is-sorted-nzhl": "^1.0.5",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-media": "^1.9.2",
