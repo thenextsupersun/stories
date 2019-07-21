@@ -1,10 +1,10 @@
 
-.App {
+.app {
   height: 100%;
   position: relative;
 }
 
-.App > div{
+.app > div{
   position: absolute;
   width: 100%;
 }
